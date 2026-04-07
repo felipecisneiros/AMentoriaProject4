@@ -1,0 +1,19 @@
+<Next.js 14 App Router configuration>
+The app has been configured with:
+- ✅ TypeScript enabled
+- ✅ Tailwind CSS configured
+- ✅ React 18 with Server & Client components
+- ✅ App Router (not Pages Router)
+- ✅ PostCSS for Tailwind processing
+- ✅ ESM/CommonJS compatibility
+
+Directory Structure:
+/app                 - Pages and layouts (App Router)
+/components          - Reusable React components
+/public              - Static assets
+
+Key Files:
+- app/layout.tsx     - Root layout with metadata
+- app/globals.css    - Global styles and Tailwind imports
+- tailwind.config.js - Tailwind theme configuration
+- tsconfig.json      - TypeScript configuration

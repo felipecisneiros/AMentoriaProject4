@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, rgba(56,189,248,0.16), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(168,85,247,0.18), transparent 22%),
+    #020617;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(56,189,248,0.35);
+  color: white;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
+  a {
+    @apply text-sky-400 hover:text-sky-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-full font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-sky-500 via-cyan-400 to-teal-400 text-slate-950 shadow-lg shadow-cyan-500/20 hover:scale-[1.01];
+  }
+
+  .btn-secondary {
+    @apply btn bg-slate-800 border border-slate-700 text-slate-100 hover:bg-slate-700;
+  }
+
+  .btn-outline {
+    @apply btn border border-sky-500 text-sky-400 hover:bg-slate-900;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-2xl border border-slate-700 bg-slate-900 text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition;
+  }
+}
